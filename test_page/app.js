@@ -1,5 +1,20 @@
 document.body.style.backgroundColor = "#1d2a35";
-document.querySelector("button").style.display = "block";
+
+let btn = document.querySelectorAll("button");
+
+for (let i = 0; i < btn.length; i++) {
+    btn[i].style.display = "block";
+    btn[i].style.backgroundColor = "#0069ff";
+    btn[i].style.padding = "15px";
+    btn[i].style.borderRadius = "5px";
+    btn[i].style.cursor = "pointer";
+    btn[i].style.color = "#fff";
+    btn[i].style.textTransform = "uppercase";
+    btn[i].style.fontWeight = "bold";
+    btn[i].style.margin = "20px auto";
+    btn[i].style.outline = "none";
+    btn[i].style.border = "none";
+}
 
 document.getElementById("clickBtn").addEventListener("click", function () {
     alert("You have just clicked me!");
