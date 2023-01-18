@@ -27,3 +27,19 @@ document.getElementById("askMe").addEventListener("click", function () {
     if (confirm("Do you like programming?")) alert("That's great!");
     else alert("I'm sorry to hear that! ;(");
 });
+
+const solveEq = (a, b, c) => {
+    const delta = b ** 2 - 4 * a * c;
+
+    if (delta < 0) {
+        return [];
+    }
+
+    if (delta === 0) {
+        return [-b / (2 * a)];
+    }
+
+    return [(-b - Math.sqrt(delta)) / (2 * a), (-b + Math.sqrt(delta)) / (2 * a)];
+};
+
+console.log(solveEq(1, 4, 4));
