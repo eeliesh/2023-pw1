@@ -8,21 +8,33 @@ let multiply = document.getElementById("multiply");
 let divide = document.getElementById("divide");
 const operators = ["*", "/", "+", "-"];
 
-sum.addEventListener("click", () => {
-    result.innerHTML = parseInt(x.value) + parseInt(y.value);
-});
+function addEvent(obj, opr) {
+    obj.addEventListener("click", () => {
+        str = "parseInt(x.value) " + opr + "parseInt(y.value)";
+        result.innerHTML = eval(str);
+    });
+}
 
-subtract.addEventListener("click", () => {
-    result.innerHTML = parseInt(x.value) - parseInt(y.value);
-});
+addEvent(sum, "+");
+addEvent(subtract, "-");
+addEvent(multiply, "*");
+addEvent(divide, "/");
 
-multiply.addEventListener("click", () => {
-    result.innerHTML = parseInt(x.value) * parseInt(y.value);
-});
+// sum.addEventListener("click", () => {
+//     result.innerHTML = parseInt(x.value) + parseInt(y.value);
+// });
 
-divide.addEventListener("click", () => {
-    result.innerHTML = parseInt(x.value) / parseInt(y.value);
-});
+// subtract.addEventListener("click", () => {
+//     result.innerHTML = parseInt(x.value) - parseInt(y.value);
+// });
+
+// multiply.addEventListener("click", () => {
+//     result.innerHTML = parseInt(x.value) * parseInt(y.value);
+// });
+
+// divide.addEventListener("click", () => {
+//     result.innerHTML = parseInt(x.value) / parseInt(y.value);
+// });
 
 document.body.addEventListener("keypress", (e) => {
     if (operators.includes(e.key)) operator.innerHTML = e.key;
