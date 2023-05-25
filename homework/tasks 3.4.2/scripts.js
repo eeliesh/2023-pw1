@@ -135,17 +135,6 @@ function sumInputNumbers() {
 // console.log(sumInputNumbers());
 
 // task 5
-/* Напиши функцию convert(fn, array), которая принимает на вход функцию и массив, и обрабатывает каждый элемент массива этой функцией, возвращая новый массив. Пример:
-function square(x) { return x * x; } // возведение в квадрат
-console.log(convert(square, [1, 2, 3, 4])); // [1, 4, 9, 16]
-console.log(convert(square, [])); // []
-Обрати внимание: функция не должна изменять переданный ей массив:
-
-let arr = [1, 2, 3];
-console.log(convert(square, arr)); // [1, 4, 9]
-console.log(arr); // [1, 2, 3]
-*/
-
 function convert(fn, array) {
     let result = [];
     for (let i of array) {
@@ -163,3 +152,11 @@ console.log(convert(square, []));
 let arr = [1, 2, 3];
 console.log(convert(square, arr));
 console.log(arr);
+
+// task 7
+function extract(start, end) {
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    return arr.slice(start, end + 1);
+}
+
+console.log(extract(2, 4));
